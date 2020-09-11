@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 /node_modules/
 /public/build/
 
 .DS_Store
+=======
+.vscode
+.idea
+node_modules
+dist
+dist-ssr
+
+>>>>>>>  initial commit
