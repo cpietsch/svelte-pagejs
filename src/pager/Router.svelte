@@ -17,7 +17,7 @@
   import { onMount, onDestroy } from "svelte";
 
   export let disabled = false;
-  export let basePath = "/svelte-pagejs";
+  export let basePath = undefined;
 
   // this is where we set the active componentc
   const last = (route) => {

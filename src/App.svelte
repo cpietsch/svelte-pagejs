@@ -6,6 +6,8 @@
   import About from "./pages/About.svelte";
   import Profile from "./pages/Profile.svelte";
 
+  const basePath = "/svelte-pagejs";
+
   const data = { foo: "bar", custom: true };
 
   const guard = (ctx, next) => {
@@ -39,14 +41,14 @@
 
 <main>
   <nav>
-    <a href="/">home</a>
-    <a href="/about">about</a>
-    <a href="/profile/joe">profile</a>
-    <a href="/news">news</a>
-    <a href="/login">login</a>
+    <a href={basePath}>home</a>
+    <a href="{basePath}/about">about</a>
+    <a href="{basePath}/profile/joe">profile</a>
+    <a href="{basePath}/news">news</a>
+    <a href="{basePath}/login">login</a>
   </nav>
 
-  <Router>
+  <Router {basePath}>
     <Route path="/" component={Home} {data} />
     <Route path="/about" component={About} />
     <Route path="/login" component={Login} />
